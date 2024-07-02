@@ -1,0 +1,465 @@
+@extends('layouts.master')
+@section('css')
+<style>
+
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 10px;
+      margin-top: -50px;
+    }
+    
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+    }
+    
+    th {
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+    
+    td {
+      text-align: left;
+    }
+        
+        select {
+      width: 100%;
+      min-width: 15ch;
+      max-width: 45ch;
+      border: 1px solid black;
+      border-radius: 0;
+      padding: 10px 10px 10px 10px;
+      font-size: 16px;
+      cursor: pointer;
+      line-height: 1.1;
+      background-color: #fff;
+      background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+    }
+    
+    </style>   
+@endsection
+@section('body')
+
+<div class="form-body">
+    <div class="website-logo">
+        <a href="index.html">
+            <div class="logo">
+                <img class="logo-size" src="images/forever-logo.png" alt="">
+            </div>
+        </a>
+    </div>
+    <div class="row">
+        <div class="img-holder">
+            <div class="bg"></div>
+            <div class="info-holder">
+                <!--<img class="md-size" src="images/appointment.png" alt="">-->
+            </div>
+        </div>
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3 class="form-title">Forever Medspaa</h3>
+                    <ul class="nav nav-tabs" id="stepsTabs" role="tablist">
+                        <li class="nav-item">
+                            <!--<a class="nav-link active" id="step1-tab" data-toggle="tab" href="#step1" role="tab" aria-controls="step1" aria-selected="true">Step1</a>-->
+                        </li>
+                        <li class="nav-item">
+                            <!--<a class="nav-link" id="step2-tab" data-toggle="tab" href="#step2" role="tab" aria-controls="step2" aria-selected="false">Step2</a>-->
+                        </li>
+                    </ul>
+                    <form>
+                        <div class="tab-content" id="stepsTabContent">
+                            <div class="tab-pane fade show active" id="step1" role="tabpanel" aria-labelledby="step1-tab">
+                                
+                                
+                                <div class="form-subtitle">Patient Name</div>
+
+                             <input type="text" id="name" name="name" required >
+                             
+                             <div class="form-subtitle">Email Address</div>
+
+                             <input type="email" id="email" name="email" required >
+                             
+                             <div class="form-subtitle">Phone</div>
+
+                             <input type="tel" id="tel" name="tel" required >
+
+                                
+                                <div class="form-subtitle">Sun Sensitivity</div>
+                                
+                                <select name="sunsensitivity" id="sunsensitivity">
+                                <option value="sentitive">Sensitive/Pale</option>
+                                <option value="lighterbrown">Lighter Brown</option>
+                                <option value="lightbrown">Light Brown</option>
+                                <option value="darkbrown">Dark Brown</option>
+                                 <option value="black">Black</option>
+                                </select>
+                                
+                                
+                                <!--<div class="inline-el-holder">-->
+                                <!--    <div class="inline-el">-->
+                                <!--        <div class="rad-with-details">-->
+                                <!--            <input type="radio" id="rad1" name="rad" required checked><label for="rad1">Bill Yearly</label>-->
+                                <!--            <div class="more-info">$99/year</div>-->
+                                <!--        </div>-->
+                                    <!--</div>-->
+                                    <!--<div class="inline-el">-->
+                                    <!--    <div class="rad-with-details">-->
+                                    <!--        <input type="radio" id="rad2" name="rad" required><label for="rad2">Bill Monthly</label>-->
+                                    <!--        <div class="more-info">$109/year</div>-->
+                                    <!--    </div>-->
+                                    </div>
+                                </div>
+                                <br>
+                                <!--<div class="separator"></div>-->
+                                <div class="form-subtitle">HQ% Prep</div>
+                                <select name="hq" id="hq">
+                                <option value="1wk">1 wk</option>
+                                <option value="2wk">2 wk</option>
+                                <option value="4wk">4 wk</option>
+                                <option value="none">None</option>
+                                </select>
+                            
+                                <br>
+                                 <br>
+                                 <div class="form-subtitle">Retinol Adequate</div>
+                                <select name="retinol" id="retinol">
+                                <option value="2wk">2 wk</option>
+                                <option value="3wk">3 wk</option>
+                                <option value="4wk">4 wk</option>
+                                <option value="none">None</option>
+                                </select>
+                                
+                                 <br>
+                                 <br>
+                                 <div class="form-subtitle">Retinol Inadequate</div>
+                                <select name="retinol1" id="retinol1">
+                                <option value="2wk">2 wk</option>
+                                <option value="3wk">3 wk</option>
+                                <option value="4wk">4 wk</option>
+                                <option value="none">None</option>
+                                 
+                                </select>
+                                <br>
+                                 <br>
+                                 <div class="form-subtitle">Sun Protection</div>
+                                <select name="sun" id="sun">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                              </select>
+                                
+                                 <br>
+                                 <br>
+                                 <div class="form-subtitle">Frekles</div>
+                                <select name="frekles" id="frekles">
+                                <option value="procedure">Procedure</option>
+                                <option value="pihrisk">PIH Risk</option>
+                                <option value="pih">PIH & Procedure Risk</option>
+                                <option value="frekles">Frekles</option>
+                                <option value="lhr">LHR</option>
+                                <option value="cit">CIT of Procedure</option>
+                                <option value="melasma">Melasma</option>
+                                </select>
+                                <!--<label>Card number</label>-->
+                                <div class="">
+                                    <!--<input type="text" class="form-control input-credit-card" placeholder="1234 1234 1234 1234">-->
+                                    <i id="ccicon"></i>
+                                </div>
+                                <div class="">
+                                    <div class="inline-el">
+                                        <!--<label>Expiry date</label>-->
+                                        <!--<input type="text" class="form-control sm-content" placeholder="MM/YY">-->
+                                    </div>
+                                    <div class="">
+                                        <!--<label>CVV</label>-->
+                                        <!--<input type="text" class="form-control sm-content" placeholder="123">-->
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="inline-el">
+                                        <!--<label>Country</label>-->
+                                        <!--<input type="text" class="form-control" placeholder="Bahrain">-->
+                                    </div>
+                                    <div class="">
+                                        <!--<label>Billing ZIP</label>-->
+                                        <!--<input type="text" class="form-control sm-content" placeholder="12345">-->
+                                    </div>
+                                </div>
+                                <div class="form-button text-centre">
+                                    <button id="btn-next" class="ibtn btn-tab-next">Submit</button>
+                                </div>
+                            </div>
+                        <!--    <div class="tab-pane fade" id="step2" role="tabpanel" aria-labelledby="step2-tab">-->
+                        <!--        <div class="form-subtitle">3. Confirm your personal information</div>-->
+                        <!--        <input type="text" class="form-control" placeholder="Full name">-->
+                        <!--        <input type="text" class="form-control" placeholder="Email address">-->
+                        <!--        <input type="password" class="form-control" placeholder="Password">-->
+                        <!--        <div class="form-button">-->
+                        <!--            <button id="submit" type="submit" class="ibtn">Process payment</button>-->
+                        <!--        </div>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+                    </form>
+                    
+                    
+                    
+                </div>
+            </div>
+            
+           <div class="form-holder">
+            <div class="form-content">
+                
+                    
+<table>
+<tr>
+<th>Procedure</th>
+<th>PIH Risk</th>
+<th>PIH & Procedure Risk</th>
+<th>Frekles</th>
+<th>LHR</th>
+<th>CIT of Procedure</th>
+<th>Melasma</th>
+</tr>
+<tr>
+<td>Facial</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+
+<tr>
+ <td>IPL</td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+</tr>
+<tr>
+<td>Diode laser 805</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Vi/Vi Adv/Vi Purify</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1064 LP</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+ <td>1540</td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+</tr>
+<tr>
+<td>CO2 Deep</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+ <tr>
+<td>Erbium</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+ <tr>
+<td>MN 1.5- 2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+ <tr>
+<td>VI PPI</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+ <tr>
+<td>Pico 532 Frac</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+ <tr>
+<td>755 LP</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+ <tr>
+<td>MN .75- 1.5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+ <tr>
+<td>Med depth peel</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+ <tr>
+<td>CO2 Mild</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+ <tr>
+<td>Pico 1064 FB</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+ <tr>
+<td>Pico 1064 Frac</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+ <tr>
+<td>Pico 532 FB</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+ <tr>
+<td>Pico 1064 FB</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+ <tr>
+<td>RFMN Ablative</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+ <tr>
+<td>RFMN 1mm Inc</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+ <tr>
+<td>RFMN 1mm not</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+    <tr>
+<td>MN .25-.75</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+    <tr>
+<td>MN 2- 3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+    <tr>
+<td>Micro-dermabra</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Contoura</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+
+        </div>
+    </div>
+</div>
+    
+@endsection

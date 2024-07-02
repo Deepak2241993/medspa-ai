@@ -1,0 +1,16 @@
+[04-Sep-2023 00:14:18 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/misfitamigos2021/public_html/forevermedspaaform/routes/api.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/misfitamigos2021/public_html/forevermedspaaform/routes/api.php on line 17
+[04-Sep-2023 00:14:26 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Broadcast" not found in /home/misfitamigos2021/public_html/forevermedspaaform/routes/channels.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/misfitamigos2021/public_html/forevermedspaaform/routes/channels.php on line 16
+[04-Sep-2023 00:14:35 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Artisan" not found in /home/misfitamigos2021/public_html/forevermedspaaform/routes/console.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/misfitamigos2021/public_html/forevermedspaaform/routes/console.php on line 17
+[04-Sep-2023 00:14:42 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/misfitamigos2021/public_html/forevermedspaaform/routes/web.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/misfitamigos2021/public_html/forevermedspaaform/routes/web.php on line 20
